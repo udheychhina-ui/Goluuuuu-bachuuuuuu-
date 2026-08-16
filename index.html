@@ -6,241 +6,313 @@
 <title>For My Goluuuu Bachuuuuuu ❤️</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+min-height:100vh;
+font-family:Georgia,"Times New Roman",serif;
+color:#fff5f8;
+background:
+radial-gradient(circle at 20% 10%,#5b203d 0%,transparent 35%),
+radial-gradient(circle at 90% 80%,#3b162d 0%,transparent 35%),
+linear-gradient(145deg,#080509,#1b0b15,#080509);
+overflow-x:hidden;
 }
 
-html {
-  scroll-behavior: smooth;
+.page{
+min-height:100vh;
+width:100%;
+padding:55px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+animation:fadeIn .8s ease;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #fff5f8;
-  background:
-    radial-gradient(circle at top, #4a1d32 0%, #1b0c16 45%, #070508 100%);
-  overflow-x: hidden;
+.hidden{display:none!important}
+
+.small{
+font-size:12px;
+letter-spacing:3px;
+opacity:.7;
+text-transform:uppercase;
 }
 
-.page {
-  min-height: 100vh;
-  width: 100%;
-  padding: 55px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  animation: fadeIn .8s ease;
+h1{
+font-size:clamp(40px,11vw,72px);
+line-height:1;
+margin:15px 0;
 }
 
-.hidden {
-  display: none !important;
+h2{
+font-size:clamp(25px,7vw,43px);
 }
 
-.small {
-  font-size: 13px;
-  letter-spacing: 2px;
-  opacity: .7;
-  text-transform: uppercase;
+h3{font-size:23px}
+
+p{
+font-size:18px;
+line-height:1.75;
 }
 
-h1 {
-  font-size: clamp(40px, 11vw, 72px);
-  line-height: 1;
-  margin: 15px 0;
+button{
+margin-top:25px;
+padding:16px 26px;
+border:1px solid rgba(255,255,255,.3);
+border-radius:999px;
+background:rgba(255,255,255,.95);
+color:#32121f;
+font-size:16px;
+font-weight:bold;
+box-shadow:0 12px 35px rgba(0,0,0,.4);
+transition:.25s;
 }
 
-h2 {
-  font-size: clamp(25px, 7vw, 45px);
+button:active{
+transform:scale(.93);
 }
 
-h3 {
-  font-size: 23px;
+.card{
+width:min(100%,650px);
+margin:14px 0;
+padding:25px;
+border-radius:27px;
+background:rgba(255,255,255,.075);
+border:1px solid rgba(255,255,255,.14);
+backdrop-filter:blur(15px);
+box-shadow:0 18px 55px rgba(0,0,0,.35);
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.7;
+.photo{
+width:min(100%,420px);
+max-height:540px;
+object-fit:cover;
+border-radius:30px;
+border:2px solid rgba(255,255,255,.25);
+box-shadow:0 20px 70px rgba(0,0,0,.55);
+margin:22px 0;
+animation:photoIn 1s ease;
 }
 
-button {
-  margin-top: 25px;
-  padding: 16px 25px;
-  border: none;
-  border-radius: 999px;
-  background: white;
-  color: #34121f;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 12px 35px rgba(0,0,0,.4);
+.hero-photo{
+width:min(100%,390px);
+height:500px;
+object-fit:cover;
+border-radius:38px;
+box-shadow:0 25px 80px rgba(0,0,0,.6);
+animation:hero 1.2s ease;
 }
 
-.card {
-  width: min(100%, 650px);
-  margin: 14px 0;
-  padding: 24px;
-  border-radius: 25px;
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.13);
-  backdrop-filter: blur(12px);
+.memory{
+width:min(100%,650px);
+margin:20px 0;
 }
 
-.photo {
-  width: min(100%, 420px);
-  max-height: 520px;
-  object-fit: cover;
-  border-radius: 28px;
-  margin: 20px 0;
-  border: 2px solid rgba(255,255,255,.25);
-  box-shadow: 0 20px 55px rgba(0,0,0,.45);
-  animation: photoIn 1s ease;
+.memory img{
+width:100%;
+max-height:520px;
+object-fit:cover;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.2);
+box-shadow:0 20px 60px rgba(0,0,0,.45);
 }
 
-.hero-photo {
-  width: min(100%, 380px);
-  height: 470px;
-  object-fit: cover;
-  border-radius: 35px;
-  margin: 25px 0;
-  box-shadow: 0 20px 70px rgba(0,0,0,.5);
+.hearts{
+font-size:32px;
+letter-spacing:12px;
+animation:float 2.5s ease-in-out infinite;
 }
 
-.memory {
-  width: min(100%, 650px);
-  margin: 20px 0;
+.pulse-heart{
+font-size:55px;
+animation:pulse 1.5s infinite;
 }
 
-.memory img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 28px;
-  border: 1px solid rgba(255,255,255,.2);
+.counter{
+width:min(100%,650px);
+margin:25px 0;
+padding:22px 15px;
+border-radius:25px;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.13);
 }
 
-.hearts {
-  font-size: 30px;
-  letter-spacing: 12px;
-  animation: float 2.5s ease-in-out infinite;
+.counter-title{
+font-size:15px;
+letter-spacing:2px;
+opacity:.75;
 }
 
-.reaction {
-  font-size: 24px;
-  padding: 12px;
-  margin: 10px;
-  border-radius: 15px;
-  background: rgba(255,255,255,.06);
+.counter-number{
+font-size:clamp(25px,7vw,42px);
+font-weight:bold;
+margin:10px 0;
 }
 
-.final-card {
-  width: min(100%, 650px);
-  padding: 30px 22px;
-  border-radius: 30px;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.15);
+.counter-sub{
+font-size:15px;
+opacity:.65;
 }
 
-.surprise {
-  margin-top: 35px;
-  animation: pop .8s ease;
+.typing{
+min-height:120px;
+white-space:pre-line;
+font-size:19px;
+line-height:1.8;
 }
 
-.surprise h1 {
-  font-size: clamp(45px, 13vw, 80px);
+.cursor{
+display:inline-block;
+width:2px;
+height:20px;
+background:#fff;
+animation:blink .7s infinite;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reaction{
+font-size:24px;
+padding:13px;
+margin:10px;
+border-radius:16px;
+background:rgba(255,255,255,.06);
 }
 
-@keyframes photoIn {
-  from {
-    opacity: 0;
-    transform: scale(.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.funny-button{
+background:rgba(255,255,255,.1);
+color:white;
+border:1px solid rgba(255,255,255,.25);
 }
 
-@keyframes float {
-  0%,100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
+.final-card{
+width:min(100%,650px);
+padding:32px 22px;
+border-radius:32px;
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.15);
+box-shadow:0 20px 70px rgba(0,0,0,.4);
 }
 
-@keyframes pop {
-  0% {
-    opacity: 0;
-    transform: scale(.5);
-  }
-  70% {
-    transform: scale(1.1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+.final-line{
+font-size:21px;
+margin:18px 0;
 }
 
-@media(max-width:500px) {
-  .page {
-    padding: 45px 18px;
-  }
+.surprise{
+margin-top:35px;
+animation:pop .9s ease;
+}
 
-  p {
-    font-size: 17px;
-  }
+.surprise h1{
+font-size:clamp(48px,14vw,85px);
+}
 
-  .card {
-    padding: 20px;
-  }
+#floatingLayer{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:9999;
+overflow:hidden;
+}
+
+.float-item{
+position:absolute;
+bottom:-50px;
+animation:rise linear forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(25px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes photoIn{
+from{opacity:0;transform:scale(.9)}
+to{opacity:1;transform:scale(1)}
+}
+
+@keyframes hero{
+from{opacity:0;transform:scale(.88) translateY(25px)}
+to{opacity:1;transform:scale(1) translateY(0)}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.18)}
+}
+
+@keyframes blink{
+50%{opacity:0}
+}
+
+@keyframes pop{
+0%{opacity:0;transform:scale(.5)}
+70%{transform:scale(1.1)}
+100%{opacity:1;transform:scale(1)}
+}
+
+@keyframes rise{
+from{
+transform:translateY(0) rotate(0);
+opacity:1;
+}
+to{
+transform:translateY(-115vh) rotate(360deg);
+opacity:0;
+}
+}
+
+@media(max-width:500px){
+.page{padding:45px 18px}
+p{font-size:17px}
+.card{padding:20px}
 }
 </style>
 </head>
 
 <body>
 
+<div id="floatingLayer"></div>
+
 <!-- INTRO -->
 <section class="page" id="intro">
 
-  <div class="hearts">♡ ❤️ ♡</div>
+<div class="hearts">♡ ❤️ ♡</div>
 
-  <p class="small">A little something from Udhriiiii</p>
+<p class="small">A little something from Udhriiiii</p>
 
-  <h1>For my<br>Goluuuu Bachuuuuuu ❤️</h1>
+<h1>For my<br>Goluuuu Bachuuuuuu ❤️</h1>
 
-  <img
-    class="hero-photo"
-    src="IMG_6307.jpeg"
-    alt="My beautiful Goluuuu"
-  >
+<img class="hero-photo"
+src="IMG_6307.jpeg"
+alt="My Goluuuu">
 
-  <p>
-    Almost 3 years of us...
-  </p>
+<p>Almost 3 years of us...</p>
 
-  <p>
-    And I still have so much to tell you.
-  </p>
+<div class="counter">
+<div class="counter-title">YOU & ME ❤️</div>
+<div class="counter-number" id="counter">
+Loading...
+</div>
+<div class="counter-sub">
+Since 14 March 2024
+</div>
+</div>
 
-  <button onclick="showPage('apology')">
-    Open this, my kuchuuuu ❤️
-  </button>
+<p>And I still have so much to tell you.</p>
+
+<button onclick="showPage('apology')">
+Open this, my kuchuuuu ❤️
+</button>
 
 </section>
 
@@ -248,69 +320,25 @@ button {
 <!-- APOLOGY -->
 <section class="page hidden" id="apology">
 
-  <p class="small">🥺 From your Udhriiiii</p>
+<div class="pulse-heart">🥺</div>
 
-  <h1>I owe you a Sowieeeeeeee.</h1>
+<p class="small">From your Udhriiiii</p>
 
-  <img
-    class="photo"
-    src="IMG_6303.jpeg"
-    alt="Goluuuu ❤️"
-  >
+<h1>Sowieeeeeeee.</h1>
 
-  <div class="card">
+<img class="photo"
+src="IMG_6303.jpeg"
+alt="Goluuuu ❤️">
 
-    <p>
-      I'm sorry for the times I made you feel hurt.
-    </p>
+<div class="card">
 
-    <p>
-      I'm sorry for the times I made you feel unheard,
-      unchosen, or alone.
-    </p>
+<div id="typingText" class="typing"></div>
 
-    <p>
-      I'm sorry for the times when instead of making you
-      feel safe with me, I became the reason you were hurting.
-    </p>
+</div>
 
-    <p>
-      I'm sorry for being manipulative and for acting in ways
-      that weren't fair to you.
-    </p>
-
-    <p>
-      I don't want to defend those things.
-      I genuinely want to change them.
-    </p>
-
-    <p>
-      I really want to come over all these things,
-      my love.
-    </p>
-
-    <p>
-      Sowieeeeeeee for the worst things I've done to you,
-      my kuchuuuuu puchuuuuuuu ❤️
-    </p>
-
-    <p>
-      I know a Sowieeeeeeee can't erase what happened.
-    </p>
-
-    <p>
-      So I don't want to just say Sowieeeeeeee.
-    </p>
-
-    <h3>
-      I want to show you. ❤️
-    </h3>
-
-  </div>
-
-  <button onclick="showPage('love')">
-    Come with me → ❤️
-  </button>
+<button onclick="showPage('love')">
+Come with me, my love → ❤️
+</button>
 
 </section>
 
@@ -318,96 +346,101 @@ button {
 <!-- LOVE -->
 <section class="page hidden" id="love">
 
-  <p class="small">❤️ Things I absolutely adore about you</p>
+<p class="small">❤️ Things I absolutely adore about you</p>
 
-  <h1>There are so many...</h1>
+<h1>Where do I even start?</h1>
 
-  <div class="memory">
+<div class="memory">
+<img src="IMG_6124.jpeg" alt="My beautiful Goluuuu">
+</div>
 
-    <img
-      src="IMG_6130.jpeg"
-      alt="Goluuuu ❤️"
-    >
+<div class="card">
 
-  </div>
+<h3>🥹 Your little excitement</h3>
 
-  <div class="card">
+<p>
+I love how you get excited over the smallest things.
+And when you eat your favourite food and get all happy...
+</p>
 
-    <h3>🥹 Your little excitement</h3>
+<h2>MY GOD 😭❤️</h2>
 
-    <p>
-      I love how you get excited over the smallest things.
-      And when you eat your favourite food and get all happy...
-      MY GOD 😭❤️
-    </p>
+<p>
+I could literally sit there and watch you be happy forever.
+</p>
 
-  </div>
+</div>
 
+<div class="card">
 
-  <div class="card">
+<h3>🥺 Your baby voice</h3>
 
-    <h3>🥺 Your baby voice</h3>
+<p>
+That baby voice of yours...
+</p>
 
-    <p>
-      Goluuuu, you have absolutely no idea what that voice
-      does to me.
-      I literally fall for you every time.
-    </p>
+<p>
+Goluuuu, you have absolutely no idea what that voice
+does to me.
+</p>
 
-  </div>
+<p>
+I literally fall for you every single time.
+</p>
 
+</div>
 
-  <div class="card">
+<div class="card">
 
-    <h3>🫶🏻 The way you take care of me</h3>
+<h3>🫶🏻 The way you take care of me</h3>
 
-    <p>
-      When I'm feeling low, you know how to make me feel better.
-      I love how cared for you make me feel.
-    </p>
+<p>
+When I'm feeling low, you somehow know how to make me feel better.
+</p>
 
-  </div>
+<p>
+You make me feel cared for.
+And I don't think I tell you enough how much that means to me.
+</p>
 
+</div>
 
-  <div class="card">
+<div class="card">
 
-    <h3>😍 Your beautiful face</h3>
+<h3>😍 Your beauty</h3>
 
-    <p>
-      You're literally so beautiful that sometimes
-      I just don't want to take my eyes off you.
-      My beautiful cutieeeee ❤️
-    </p>
+<p>
+You're literally so beautiful that sometimes
+I just don't want to take my eyes off you.
+</p>
 
-  </div>
+<h2>My beautiful cutieeeee ❤️</h2>
 
+</div>
 
-  <div class="memory">
+<div class="memory">
+<img src="IMG_5777.jpeg" alt="My beautiful girl">
+</div>
 
-    <img
-      src="IMG_6124.jpeg"
-      alt="My beautiful girl ❤️"
-    >
+<div class="card">
 
-  </div>
+<h3>🥹 That look</h3>
 
+<p>
+The way you look at me with that face...
+</p>
 
-  <div class="card">
+<h2>My god.</h2>
 
-    <h3>🥹 That look</h3>
+<p>
+I'm addicted to it.
+</p>
 
-    <p>
-      The way you look at me with that face...
-      My god.
-      I'm addicted to it.
-    </p>
+</div>
 
-  </div>
-
-
-  <button onclick="showPage('funny')">
-    Okay enough emotions 😂 →
-  </button>
+<button onclick="showPage('funny')">
+Okay enough emotions 😂 →
+</button>
 
 </section>
 
@@ -415,102 +448,103 @@ button {
 <!-- FUNNY -->
 <section class="page hidden" id="funny">
 
-  <p class="small">🚨 THE GOLUUUU FILES 🚨</p>
+<div class="hearts">😂 ❤️ 😂</div>
 
-  <h1>
-    Now let's discuss<br>
-    the serious stuff.
-  </h1>
+<p class="small">🚨 THE GOLUUUU FILES 🚨</p>
 
-  <div class="memory">
+<h1>Now the serious investigation begins.</h1>
 
-    <img
-      src="IMG_5777.jpeg"
-      alt="Goluuuu being Goluuuu 😂"
-    >
+<div class="card">
 
-  </div>
+<h3>😂 Exhibit #1</h3>
 
+<h2>The HEHEHEHE laugh</h2>
 
-  <div class="card">
+<p>
+HEHEHEHEHEHEHEHE.
+</p>
 
-    <h3>😂 The HEHEHEHE laugh</h3>
+<p>
+That laugh is genuinely one of my favourite things.
+</p>
 
-    <p>
-      That laugh.
-      HEHEHEHEHEHEHE.
-    </p>
+</div>
 
-    <p>
-      I don't know whether to laugh with you
-      or just stare because you're so cute.
-    </p>
+<div class="card">
 
-  </div>
+<h3>🤭 Exhibit #2</h3>
 
+<h2>Your clumsy side</h2>
 
-  <div class="card">
+<p>
+Your clumsy behaviour with me...
+</p>
 
-    <h3>🤭 Your clumsy side</h3>
+<p>
+I LOVE that side of you. 🤭
+</p>
 
-    <p>
-      Your clumsy behaviour with me is honestly
-      one of my favourite things.
-    </p>
+</div>
 
-    <p>
-      I LOVE that silly side of you. 🤭
-    </p>
+<div class="card">
 
-  </div>
+<h3>😭 Exhibit #3</h3>
 
+<h2>Your reaction to my jokes</h2>
 
-  <div class="card">
+<p>
+When I crack a joke and it is absolutely NOT funny...
+</p>
 
-    <h3>😭 Your reaction to my bad jokes</h3>
+<div class="reaction">
+Goluuuu: 😐
+</div>
 
-    <p>
-      When I crack a joke and it's absolutely
-      NOT funny...
-    </p>
+<div class="reaction">
+Udhriiiii: 😭
+</div>
 
-    <div class="reaction">
-      Goluuuu: 😐
-    </div>
+</div>
 
-    <div class="reaction">
-      Udhriiiii: 😭
-    </div>
+<div class="card">
 
-  </div>
+<h3>🤪 Exhibit #4</h3>
 
+<h2>Your silly jokes</h2>
 
-  <div class="card">
+<p>
+Your jokes about literally everything...
+</p>
 
-    <h3>🤪 Your silly jokes</h3>
+<p>
+Somehow I still love them because they're YOUR jokes.
+</p>
 
-    <p>
-      Your jokes about literally everything...
-      somehow I still love them because they're
-      YOUR jokes.
-    </p>
+</div>
 
-  </div>
+<div class="card">
 
+<h3>🚨 IMPORTANT QUESTION</h3>
 
-  <div class="memory">
+<p>
+Who is more annoying?
+</p>
 
-    <img
-      src="IMG_6124.jpeg"
-      alt="My Goluuuu ❤️"
-    >
+<button class="funny-button" onclick="wrongAnswer()">
+Udhriiiii 😭
+</button>
 
-  </div>
+<button class="funny-button" onclick="correctAnswer()">
+Goluuuu 🤭
+</button>
 
+<p id="answer"></p>
 
-  <button onclick="showPage('final')">
-    One last thing... 💌
-  </button>
+</div>
+
+<button onclick="showPage('final')">
+One last thing... 💌
+</button>
 
 </section>
 
@@ -518,184 +552,278 @@ button {
 <!-- FINAL -->
 <section class="page hidden" id="final">
 
-  <div class="hearts">
-    ❤️ ♡ ❤️
-  </div>
+<div class="hearts">❤️ ♡ ❤️</div>
 
-  <p class="small">
-    Almost 3 years of us
-  </p>
+<p class="small">14 March 2024 → forever</p>
 
-  <h1>
-    After everything...
-  </h1>
+<h1>After everything...</h1>
 
-  <img
-    class="photo"
-    src="IMG_6307.jpeg"
-    alt="Us ❤️"
-  >
+<img class="photo"
+src="IMG_6307.jpeg"
+alt="My Goluuuu ❤️">
 
-  <div class="final-card">
+<div class="final-card">
 
-    <p>
-      We've had beautiful days.
-    </p>
+<p class="final-line">
+We've had beautiful days.
+</p>
 
-    <p>
-      We've had stupid fights.
-    </p>
+<p class="final-line">
+We've had stupid fights.
+</p>
 
-    <p>
-      We've hurt each other.
-    </p>
+<p class="final-line">
+We've hurt each other.
+</p>
 
-    <p>
-      We've laughed until we couldn't breathe.
-    </p>
+<p class="final-line">
+We've laughed until we couldn't breathe.
+</p>
 
-    <p>
-      We've made memories I'll never forget.
-    </p>
+<p class="final-line">
+We've made memories I'll never forget.
+</p>
 
-    <h2>
-      And through all of it...
-    </h2>
+<h2>And through all of it...</h2>
 
-    <h1>
-      I still choose you. ❤️
-    </h1>
+<h1>I still choose you. ❤️</h1>
 
-    <p>
-      Not someone else.<br>
-      Not something better.<br>
-      <strong>You.</strong>
-    </p>
+<p>
+Not someone else.<br>
+Not something better.<br>
+<strong>You.</strong>
+</p>
 
-    <h2>
-      My Goluuuu Bachuuuuuu 🥹
-    </h2>
+<h2>My Goluuuu Bachuuuuuu 🥹</h2>
 
-    <h2>
-      My kuchuuuuu puchuuuuuuu ❤️
-    </h2>
+<h2>My kuchuuuuu puchuuuuuuu ❤️</h2>
 
-    <h2>
-      My favourite person.
-    </h2>
+<h2>My favourite person.</h2>
 
-    <h2>
-      My love.
-    </h2>
+<h2>My love.</h2>
 
-  </div>
+</div>
 
-  <button onclick="finalSurprise()">
-    Come here, idiot ❤️
-  </button>
+<button onclick="finalSurprise()">
+Come here, idiot ❤️
+</button>
 
-  <div id="surprise" class="hidden surprise">
+<div id="surprise" class="hidden surprise">
 
-    <h1>
-      I LOVE YOU ❤️
-    </h1>
+<h1>I LOVE YOU ❤️</h1>
 
-    <p>
-      Always your Udhriiiii 🫶🏻
-    </p>
+<p>
+Always your Udhriiiii 🫶🏻
+</p>
 
-  </div>
+<h2>
+And yes...
+</h2>
+
+<h2>
+I'm still completely addicted to you. ❤️
+</h2>
+
+</div>
 
 </section>
 
 
 <script>
 
-function showPage(pageId) {
+const startDate = new Date("2024-03-14T00:00:00");
 
-  document.querySelectorAll(".page").forEach(function(page) {
-    page.classList.add("hidden");
-  });
+function updateCounter(){
 
-  const page = document.getElementById(pageId);
+const now = new Date();
 
-  page.classList.remove("hidden");
+let years = now.getFullYear() - startDate.getFullYear();
+let months = now.getMonth() - startDate.getMonth();
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+if(months < 0){
+years--;
+months += 12;
+}
+
+let temp = new Date(startDate);
+temp.setFullYear(startDate.getFullYear() + years);
+temp.setMonth(startDate.getMonth() + months);
+
+if(temp > now){
+months--;
+}
+
+const diff = now - startDate;
+
+const days = Math.floor(diff / 86400000);
+
+const hours = Math.floor((diff / 3600000) % 24);
+
+const minutes = Math.floor((diff / 60000) % 60);
+
+const seconds = Math.floor((diff / 1000) % 60);
+
+document.getElementById("counter").innerHTML =
+years + " years • " +
+months + " months<br>" +
+days + " days • " +
+hours + " hours<br>" +
+minutes + " min • " +
+seconds + " sec";
+
+}
+
+setInterval(updateCounter,1000);
+
+updateCounter();
+
+
+function showPage(pageId){
+
+document.querySelectorAll(".page").forEach(page=>{
+page.classList.add("hidden");
+});
+
+document.getElementById(pageId).classList.remove("hidden");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+createFloatingHearts(8);
+
+if(pageId==="apology"){
+startTyping();
+}
+
 }
 
 
-function finalSurprise() {
+const apologyMessage =
+`I'm sorry for the times I made you feel hurt.
 
-  const surprise = document.getElementById("surprise");
+I'm sorry for the times I made you feel unheard, unchosen, or alone.
 
-  surprise.classList.remove("hidden");
+I'm sorry for the times when instead of making you feel safe with me, I became the reason you were hurting.
 
-  createHearts();
+I'm sorry for being manipulative and for acting in ways that weren't fair to you.
+
+I don't want to defend those things.
+
+I genuinely want to change them.
+
+I really want to come over all these things, my love.
+
+Sowieeeeeeee for the worst things I've done to you, my kuchuuuuu puchuuuuuuu ❤️
+
+I know a Sowieeeeeeee can't erase what happened.
+
+So I don't want to just say Sowieeeeeeee.
+
+I want to show you. ❤️`;
+
+let typingStarted=false;
+
+function startTyping(){
+
+if(typingStarted)return;
+
+typingStarted=true;
+
+const box=document.getElementById("typingText");
+
+let i=0;
+
+function type(){
+
+if(i<apologyMessage.length){
+
+box.innerHTML =
+apologyMessage.substring(0,i+1)
+.replace(/\n/g,"<br>");
+
+i++;
+
+setTimeout(type,25);
+
+}else{
+
+box.innerHTML +=
+'<span class="cursor"></span>';
+
+}
+
+}
+
+type();
 
 }
 
 
-function createHearts() {
+function wrongAnswer(){
 
-  const symbols = [
-    "❤️",
-    "💗",
-    "💕",
-    "💖",
-    "💘",
-    "🥹"
-  ];
+document.getElementById("answer").innerHTML =
+"WRONG ANSWER 😭😂 Nice try, Udhriiiii.";
 
-  for (let i = 0; i < 40; i++) {
+createFloatingHearts(12);
 
-    const heart = document.createElement("div");
+}
 
-    heart.innerHTML =
-      symbols[Math.floor(Math.random() * symbols.length)];
 
-    heart.style.position = "fixed";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.bottom = "-30px";
-    heart.style.fontSize =
-      (18 + Math.random() * 25) + "px";
+function correctAnswer(){
 
-    heart.style.zIndex = "9999";
-    heart.style.pointerEvents = "none";
+document.getElementById("answer").innerHTML =
+"CORRECT. Obviously. 🤭❤️";
 
-    document.body.appendChild(heart);
+createFloatingHearts(15);
 
-    const duration =
-      2500 + Math.random() * 2500;
+}
 
-    heart.animate(
-      [
-        {
-          transform: "translateY(0) rotate(0deg)",
-          opacity: 1
-        },
-        {
-          transform:
-            "translateY(-110vh) rotate(" +
-            Math.random() * 360 +
-            "deg)",
-          opacity: 0
-        }
-      ],
-      {
-        duration: duration,
-        easing: "ease-out"
-      }
-    );
 
-    setTimeout(function() {
-      heart.remove();
-    }, duration);
+function finalSurprise(){
 
-  }
+document.getElementById("surprise")
+.classList.remove("hidden");
+
+createFloatingHearts(55);
+
+}
+
+
+function createFloatingHearts(amount){
+
+const layer=document.getElementById("floatingLayer");
+
+const symbols=[
+"❤️","💗","💕","💖","💘","🌸","✨","🥹"
+];
+
+for(let i=0;i<amount;i++){
+
+const item=document.createElement("div");
+
+item.className="float-item";
+
+item.innerHTML=
+symbols[Math.floor(Math.random()*symbols.length)];
+
+item.style.left=
+Math.random()*100+"vw";
+
+item.style.fontSize=
+(18+Math.random()*25)+"px";
+
+item.style.animationDuration=
+(3+Math.random()*4)+"s";
+
+layer.appendChild(item);
+
+setTimeout(()=>{
+item.remove();
+},7000);
+
+}
 
 }
 
